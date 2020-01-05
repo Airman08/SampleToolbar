@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
     Button button_intent1;
+    FloatingActionButton button_intent2;
 
 
     @Override
@@ -24,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Intent1Activity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        button_intent2 = findViewById(R.id.button_intent2);
+        button_intent2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this, Intent2Activity.class);
+                startActivity(intent);
             }
         });
     }
